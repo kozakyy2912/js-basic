@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+    #pap2 {
+        border: dotted orange 1px;
+        width: 220px;
+        text-align: center;
+        margin-left: 200px;
+    }
+
+    .box1 {
+        border: dotted orange 1px;
+        width: 700px;
+        margin: 24px;
+        padding: 12px;
+    }
+
+    .box {
+        border: dotted orange 1px;
+        margin-left: 215px;
+        padding: 15px;
+        width: 200px;
+    }
+
+    .box div {
+        width: 200px;
+        background: lime;
+        transition: transform 2s;
+    }
+    </style>
+</head>
+
+<body>
+    <!--1. У вас есть форма с кнопкой и элемент параграф (тег p)…Нажав на кнопку у вас в
+параграфе появляется какая то картинка
+2. У вас есть форма с двумя элементами ввода текста, кнопка и два тега p….Нажав
+на кнопку, у вас в один параграф заноситься текст , который которые ввели из
+одного элемента и в другой параграф заноситься информация из другого
+элемента ввода
+
+
+3.Дан HTML код (см. под задачей). Поменяйте содержимое абзацев на их порядковый номер в коде.
+
+
+<h2>Заголовок, не поменяется.</h2>
+<p>Абзац, поменяется.</p>
+<p>Абзац, поменяется.</p>
+<p>Абзац, поменяется.</p>
+
+
+
+
+
+--><button id = "button">Click</button>
+<div id = "show_foto" ></div>
+<h1 id = "zagolovok"> ПАРАГРАФЫ </h1>
+<br>
+<h2 id = "paragraph2"> ПАРАГРАФЫ </h2>
+
+<div id = "ris"></div>
+<input type = "button" value="Input Button" id="perviy_button">
+<button id = "popitka">ПОПЫТАЙСЯ</button>
+<p>Текст (от лат. textus «ткань; сплетение, связь, сочетание») — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и
+    <div id = "abzac"></div>полная последовательность символов.</p>
+<p class = "paragraf">
+Существуют две основные трактовки понятия «текст»: «имманентная» (расширенная, философски нагруженная) и «репрезентативная» (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. </p>
+
+<p id = "stroka">Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.</div>
+</p>
+
+<button id= "kartinka_sobak">НЕЖДАНЧИК</button>
+
+<p style= "text-align: center;">
+        <button id="show_button_cveti" style="border-color:black;">
+        <img src="https://www.xfivecdn.com/xfive/wp-content/uploads/2016/06/13153701/flowers1.jpg" width=70 style="vertical-align: middle;border-radius:40px;"> ЦВЕТОЧКИ </button>
+
+    </p>
+    <br>
+    <div class= "box">
+        <div id="onebox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt labore voluptas, atque maxime accusamus, velit?</div>
+        <br>
+        <div id="twobox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt labore voluptas, atque maxime accusamus, velit?</div>
+    </div>
+
+
+    <br>
+
+    <form>
+        <label for='text1'>Введите текст 1: </label>
+        <input type="text" id="text1" name="text1">
+        <br>
+        <label for='text2'>Введите текст 2: </label>
+        <input type="text" id="text2" name="text2">
+        <br>
+        <input type="button" onclick="buttonClick()" value="Копировать текст и вставить!">
+        <br>
+    </form>
+    <p id='p1'>Тут должен быть текст 1</p>
+    <p id='p2'>Тут должен быть текст 2</p>
+
+
+    <br>
+    <br>
+
+    <h1>Calculator</h1>
+    <div class="box1">
+        <input type="text" id="num1"> +
+        <input type="text" id="num2"> =
+        <input type="text" id="sum">
+        <input type="submit" value="Сложить" id=plus>
+    </div>
+
+    
+    <h2>Заголовок, не поменяется.</h2>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <a>Абзац, поменяется.</a><br>
+    <input type="button" onclick="Click()" value="Copy to paragraph">
+    
+
+    <script>
+
+
+
+    document.getElementById("button").onclick = function() {
+        show_foto.innerHTML = "<img src='http://www.chartattack.com/wp-content/uploads/2015/08/Nirvana-E-Coli.jpg' width=100px height=100px  />"
+    }
+
+
+
+    document.getElementById("perviy_button").onclick = function() {
+        document.body.style.backgroundColor = 'skyblue';
+    }
+
+
+    var paragraf = document.getElementsByClassName("paragraf");
+    paragraf[0].onclick = function() {
+        this.style.color = 'tomato';
+    };
+
+    var popitka = document.getElementById("popitka").onclick = function() {
+        this.style.backgroundColor = 'red';
+        zagolovok.style.color = 'gold';
+    }
+
+    var kartinka = document.getElementById("kartinka_sobak").onclick = function() {
+        abzac.innerHTML = "<img src='https://www.diets.ru/data/cache/2012aug/07/31/917926_14581nothumb500.jpg' width=150px height=150px>";
+        this.style.backgroundColor = 'gold';
+
+    }
+
+    var cveti = document.getElementById("show_button_cveti").onclick = function() {
+        this.style.backgroundColor = 'green';
+        this.style.color = 'red';
+        onebox.style.backgroundColor = 'silver';
+        onebox.style.color = 'blue';
+        onebox.style.borderRadius = '30px';
+        onebox.style.textShadow = "5p 5px 1pxx black,10px 10px 1px green";
+        twobox.style.transform = "rotate(360deg)";
+    }
+
+    var show_paragraph2 = document.getElementById("paragraph2")
+    show_paragraph2.onclick = function() {
+        this.innerHTML = "<img src='img/12.jpg' alt=comp width=150px height=150px>";
+        this.style.borderRadius = "50px";
+    }
+
+
+
+
+
+
+    document.getElementById("twobox").onclick = function() {
+        this.style.transform = "rotate(360deg)";
+    }
+
+
+
+    /*2. У вас есть форма с двумя элементами ввода текста, кнопка и два тега p….Нажав
+    на кнопку, у вас в один параграф заноситься текст , который которые ввели из
+    одного элемента и в другой параграф заноситься информация из другого
+    элемента ввода
+    */
+
+    function buttonClick() {
+        var info1 = document.getElementById('text1').value;
+        document.getElementById('p1').innerHTML = info1;
+
+        var info2 = document.getElementById('text2').value;
+        document.getElementById('p2').innerHTML = info2;
+    }
+
+
+
+
+
+    //eksperiment
+
+    document.getElementById('plus').onclick = function() {
+        this.style.color = 'red';
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        console.log(n1, n2);
+        if (isNaN(n1) || isNaN(n2)) {
+            alert("this not number");
+        } else {
+            document.getElementById('sum').value = n1 * 1 + n2 * 1;
+        }
+    }
+
+
+    //Дан HTML код. Поменяйте содержимое абзацев на их порядковый номер в коде.
+
+    function Click() {
+        var x = document.getElementsByTagName('a');
+        var p = 0;
+        for (var i = 0; i < x.length; i++) {
+            document.getElementsByTagName("a")[i].innerHTML = p + i;
+        }
+    }
+    </script>
+</body>
+
+</html>

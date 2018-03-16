@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>domaxa3</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //<!-- 1.Создать функцию, возводящую число в степень, число и сама степень вводится пользователем -->
+
+
+    /*
+    var a=Number(prompt('vvedite cheslo'));
+    var b= Number(prompt('teper stepen'));
+
+    function step(){
+    	return a**b
+    }
+    alert(step());
+
+    */
+
+
+
+    //!!эксперименты на № 1
+
+    /*
+    var a= Number(prompt('vvedite cheslo'));
+    var b= Number(prompt('teper stepen'));
+    var c
+     
+    function step(){
+    	c=a**b
+    	
+    	if(c===25){
+    		return c+' '+"sxoditsa"
+    	}else{
+    		return c +" "+"ne pravilno"
+    	}
+    }
+    alert(step());
+
+    */
+
+
+
+    /*
+    var a = 2;
+    var b = 4;
+    function step(){
+    	return a**b
+    }
+    alert(step());
+    */
+
+
+    /*function step(a, b){
+    	return a**b
+
+
+    }
+    alert(step(3, 3));
+    */
+
+
+
+
+
+    //     2.Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл. 
+
+
+    /*
+    function fib(n) {
+      var a = 1,
+        b = 1;
+      for (var i = 3; i <= n; i++) {
+        var c = a + b;
+        a = b;
+        b = c;
+      }
+      return b;
+    }
+
+    alert( fib(3) ); 
+    alert( fib(7) ); 
+    alert( fib(77) ); 
+
+    */
+
+    /*
+    var a = 0;
+    var b = 1;
+    var fibon;
+
+    fibon=b;
+
+    for (var i=0;i<30;i++){
+    		document.write(fibon+'<br>');
+    			fibon = a+b;
+    				a=b;
+    				b=fibon;
+    }
+
+
+    */
+
+
+
+
+
+
+
+    //3.Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке. Показать решение.
+
+    /*			
+var a = prompt('Введите день:');
+
+function week(){
+
+	switch(a){
+
+	case"1":
+		alert("День недели понедельник");
+		break;
+	case"2":
+		alert("День недели вторник");
+		break;
+	case"3":
+		alert("День недели среда");
+		break;
+	case"4":
+		alert("День недели четверг");
+		break;
+	case"5":
+		alert("День недели пятница");
+		break;
+	case"6":
+		alert("День недели суббота");
+		break;
+	case"7":
+		alert("День недели воскресения");
+		break;
+	}
+
+}
+
+week(a);
+
+
+*/
+
+    //4.Добавьте пару параграфов на страницу. Напишите функцию, которая выделяет все параграфы на странице красным цветом фона.
+
+
+
+    //		Отдельно отправил		!!!
+
+
+
+    //5.Функция принимает параметр - возраст пользователя. Если число больше 16 – то выводим «добро пожаловать», если меньше – “вы еще молоды”.
+
+
+    /*
+    var a = +prompt("Вам есть 16 или больше :");
+    function year(a){	
+
+
+    	if(a>16){
+    		alert("Добро пожаловать:"); 
+    	}
+    	 else {
+    		alert("Вы еще молоды");
+    	}
+    }
+    year(a);
+    */
+
+    /*
+
+    var a = prompt("Вам есть 16 или больше :");
+    function age(){
+
+    if ( a > 16 ) {
+    	alert("Добро пожаловать:");
+    	}
+     else if(a < 16) {
+    	alert("Вы еще молоды");
+    	}
+    	else{
+    		alert("подождите не много ))");}
+    }
+     age(a);
+
+
+    */
+
+
+
+    /*
+    function age(a){
+
+    if (a > 16 ) {
+    	alert("Добро пожаловать:");
+    }
+     else if(a < 16) {
+    	alert("Вы еще молоды");
+    }
+    }
+     age(10);
+     age(22);
+
+    */
+
+
+
+    //6.Создайте функцию, которая считает длину массива и возвращает ее в виде числа. Массив в функцию передается как аргумент. Если аргумент не задан – выводится сообщение об ошибке.
+
+    //     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    function argum(){
+
+    	var res=0;
+
+    	for( var i = 0; i<arguments.length;i++){
+    		if (res += arguments[i]){
+    			 return res;
+    		}else {alert("ошибка");
+    		 }
+    	}
+
+    }
+    document.write(argum(2,5,8,4,1,));
+
+
+    
+
+
+
+    /*
+            function showsSum() {
+
+                var res= 0;
+                
+
+                for (var i = 0; i < arguments.length; i++) {
+                   res += arguments[i] 
+                    
+                }
+                return res
+
+            }
+            document.write(showsSum(1,2,3,4,5,7,88));
+
+
+*/
+
+    
+    </script>
+</body>
+
+</html>

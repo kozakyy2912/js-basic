@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domashka-prepod</title>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+	
+
+
+// 1 Сделать собственные примеры методов применяемых для массивов.
+
+
+      //сразу применил несколько методов обьединил два масива (concat) и  разделил строку(join)
+             //вроде получилось
+
+
+/*
+var cars = ["Mercedes", "Audi", "BMW","Volvo","Lexsus"];
+var dop = ['zapor','zill', 'mazda','opel'];
+
+var mashini = cars.concat(dop);
+
+
+             //var car = mashini.join('<br>' + " car:- " );
+
+             //document.write(car);
+
+var carss=mashini;
+var input;
+
+        while (input !== null) {
+            
+            input = prompt("Введите название новой машины.\n\n Уже есть: \n\n" + carss.join("\n"));
+            carss = carss.concat(input);
+        }
+document.write(carss.join('<br>' + "car:-"));
+       
+*/
+
+
+/*
+var a=['eee',1,20,'qq',500,'ww',7,'ssss'];
+	
+	for( var i=0; i<a.length;i++){
+
+		if( typeof a[i]==="number"){
+		
+		  document.write(a[i]+'<br>');
+	}
+			
+}
+
+
+*/
+
+
+
+
+
+
+
+
+ //2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+    // Результат должен выводиться в консоль.
+
+
+/*
+var arr = [19, 565, 4, 423, 54, 86, 42, 77,99,111];
+  var num = -Infinity;
+
+  for(i=0;i<arr.length;i++){
+  	if(num<arr[i]){
+  		num=arr[i];
+  	}
+  }
+	document.write('Maximym is:' + num+ '<br>');
+
+	var num1=Infinity;
+		 for(i=0;i<arr.length;i++){
+		 	if(num1>arr[i]){
+				num1=arr[i];
+			}			
+		 }
+		 document.write('Minimum is: '+num1);
+
+
+
+
+      //3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+
+
+/*
+var cars = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda","Toyota", "Mazda", "Akura","Zill","Mersedes"];
+    document.write(cars);
+    var a = +prompt('Введите начальный индекс (от 0 до 11 включительно):');
+    var b = +prompt('Введите конечный индекс (от 0 до 11 НЕ включительно):');
+
+    var result = planets.slice(a, b);
+    document.write('Результат запроса: ' + result);
+    console.log(result);
+
+
+*/
+
+
+
+	//	4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+
+              //ещe добавил соncat'
+/*
+var num = [];
+var num1 = [];
+
+var chisla = num.concat(num1);
+
+var numbers=chisla;
+var input;
+
+        while (input !== null) {
+            
+            input = prompt( numbers.join("\n"));
+            numbers = numbers.concat(input);
+        }
+document.write("Созданный массив - " + numbers.join(';')+'<br>'+'<br>'+'<br>');
+
+	numbers.sort(function(a, b) {
+  		return a - b;
+});
+
+document.write("отсортированній массив по возростанию" + numbers);
+
+*/
+
+
+ //5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+
+
+
+/*
+ var cars = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda"];
+
+ cars.splice(6, 0, "Toyota", "Mazda", "Akura");
+
+ document.write("После вставки: " + cars);
+
+*/
+
+
+
+
+/*
+var cars = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda"];
+
+document.write("До вставки в масив: " + cars + '<br>');
+document.write("Размер массива: "  + cars.length + '<br>'+'<br>'+'<br>');
+
+
+var a = prompt('Введите новый элемент в массив :');
+
+car=cars.push(a);
+
+
+document.write("После вставки в масив: " + cars + '<br>');
+document.write("Размер массива: "  + car);
+
+*/ 
+
+
+
+
+
+
+
+
+
+
+
+   //6. Необходимо получить предпоследний элемент из массива month и вывести его на экран. 
+    //var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+/*
+
+var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+
+document.write(month[10]);
+
+*/
+
+
+					//можно и не удобным методом
+
+/*
+var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+ for(a=10;a<month.length-1;a++)
+document.write(month[a] + '<br>');
+*/
+
+
+
+
+
+
+
+
+  //7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку.  -->
+
+
+/*
+
+var ukraine=["Dinamo", "Lexus", "Lvov", "Odessa", "Dog"];
+         var population=[11, 'RX-300', 10000, 50000, 'shpic'];
+         for(i=0;i<ukraine.length;i++){
+         	document.write(ukraine[i].concat('-'+population[i] + ';<br>'));
+ }
+
+
+
+*/
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
